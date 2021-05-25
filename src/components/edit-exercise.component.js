@@ -138,7 +138,7 @@ export default class EditExercise extends Component {
             <DatePicker
               selected={this.state.date}
               onChange={this.onChangeDate}
-            />
+            />b n 
           </div>
         </div>
 

@@ -9,14 +9,14 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+      {<Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a> }
     </td>
   </tr>
 )
 
 export default class ExercisesList extends Component {
   constructor(props) {
-    super(props);
+    super(props); 
 
     this.deleteExercise = this.deleteExercise.bind(this)
 
@@ -55,9 +55,9 @@ export default class ExercisesList extends Component {
         <table className="table">
           <thead className="thead-light">
             <tr>
-              <th>Username</th>
-              <th>Description</th>
-              <th>Duration</th>
+              <th>Customer name</th>
+              <th>Vehicle Model</th>
+              <th>Price</th>
               <th>Date</th>
               <th>Actions</th>
             </tr>
